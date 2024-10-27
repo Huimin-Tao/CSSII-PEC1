@@ -1,27 +1,155 @@
 <!DOCTYPE html>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bienvenida a la comarca de Valencia">
+  <title>Valencia</title>
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@900&family=Roboto:wght@400;700;900&display=swap"
+    rel="stylesheet">
+</head>
+
+
+<body>
+  <include src="./views/header.html"></include>
+
+
+
+
+
+  <main>
+
+    <!-- Banner Horizontal con imagen -->
+    <div class="hero">
+      <div class="hero__banner">
+        <h1 class="hero__title">Bienvenidos a la página no oficial de Valencia</h1>
+      </div>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+
+    <div class="presentation">
+
+      <!-- Sección 1 : Presentación Breve del Sitio -->
+      <section class="presentation__section">
+        <h2 class="presentation__heading">VALENCIA: MAR, FUEGO Y TRADICIÓN</h2>
+        <p class="presentation__text">La comarca de Valencia, situada en el corazón de la Comunidad Valenciana, destaca
+          por su rica historia,
+          cultura y tradiciones vibrantes. Esta región combina una arquitectura impresionante, desde antiguas murallas y
+          castillos hasta iglesias y plazas llenas de encanto. Además, es famosa por sus celebraciones únicas, como las
+          Fallas, y su deliciosa gastronomía, que incluye la icónica paella. Rodeada de paisajes naturales que van desde
+          playas hasta montañas, Valencia ofrece una experiencia auténtica y cautivadora para quienes buscan explorar su
+          patrimonio mediterráneo.</p>
+        <iframe class="presentation__video" width="560" height="315"
+          src="https://www.youtube.com/embed/JM9m0iGj5ts?si=LsQSkawuM4Rlk_HT" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </section>
+
+      <!-- Sección 2 : Destacados -->
+      <section class="highlights">
+
+        <div class="highlights__header">
+          <h2 class="highlights__title">LO QUE NO TE PUEDES PERDER</h2>
+          <svg class="highlights__icon" height="64" viewBox="0 0 150 150" width="64" xmlns="http://www.w3.org/2000/svg">
+            <path class="highlights__heartbeat" d="m15 45a30 30 0 0 1 60 0 30 30 0 0 1 60 0q0 45-60 85-60-40-60-85z"
+              fill="#bf0cf0"></path>
+          </svg>
+        </div>
+
+        <!-- Destacado 1 : Playas de Valencia -->
+        <div class="highlight" id="playas">
+          <figure class="highlight__image">
+            <img class="highlight__image--fluid  clip" src="./assets/images/playa.jpg" alt="playa de Valencia"
+              width="800" height="800">
+          </figure>
+
+          <div class="highlight__content">
+            <h3>Playas de Valencia</h3>
+            <p class="highlight__text">Las playas de Valencia, como la Malvarrosa y El Saler, ofrecen arenas doradas y
+              aguas cristalinas,
+              perfectas para disfrutar del sol mediterráneo. Son ideales para relajarse, practicar deportes acuáticos y
+              disfrutar de vistas panorámicas.</p>
+          </div>
+        </div>
+
+        <!-- Destacado 2 : Fallas -->
+        <div class="highlight" id="fallas">
+          <figure class="[ highlight__image  highlight__image--even ]">
+            <img class="highlight__image--fluid  clip" src="./assets/images/falla.jpg" alt="fallas de Valencia" width="800"
+              height="800">
+          </figure>
+
+          <div class="highlight__content">
+            <h3>Fallas</h3>
+            <p class="highlight__text">Las Fallas de Valencia son una celebración llena de color y fuego, donde enormes
+              figuras artísticas
+              llenan las calles antes de ser quemadas en una espectacular ceremonia que rinde homenaje a la cultura y
+              tradiciones valencianas.</p>
+          </div>
+        </div>
+
+        <!-- Destacado 3 : Gastronomía -->
+        <div class="highlight" id="gastronomia">
+          <figure class="highlight__image">
+            <img class="highlight__image--fluid  clip" src="./assets/images/paella.jpg" alt="gastronomia de Valencia"
+              width="800" height="800">
+          </figure>
+
+          <div class="highlight__content">
+            <h3>Gastronomía</h3>
+            <p class="highlight__text">Valencia es la cuna de la paella y ofrece una gastronomía rica en sabores
+              mediterráneos. Desde la fideuá
+              hasta los buñuelos de calabaza, los platos valencianos destacan por su frescura y tradición.</p>
+          </div>
+        </div>
+
+        <!-- Destacado 4 : Naturaleza -->
+        <div class="highlight" id="naturaleza">
+          <figure class="[ highlight__image  highlight__image--even ]">
+            <img class="highlight__image--fluid  clip" src="./assets/images/naturaleza.jpg" alt="naturaleza de Valencia"
+              width="800" height="800">
+          </figure>
+
+          <div class="highlight__content">
+            <h3>Naturaleza</h3>
+            <p class="highlight__text">Valencia cuenta con una gran diversidad natural, como el Parque Natural de la
+              Albufera y el Jardín del
+              Turia, ofreciendo paisajes de lagos, arrozales y zonas verdes ideales para desconectar y disfrutar de la
+              flora y fauna local.</p>
+          </div>
+        </div>
+
+        <!-- Destacado 5 : Historia y Museos -->
+        <div class="highlight" id="historia">
+          <figure class="highlight__image">
+            <img class="highlight__image--fluid  clip" src="./assets/images/museo.jpg"
+              alt="historia y museos de Valencia" width="800" height="800">
+          </figure>
+
+          <div class="highlight__content">
+            <h3>Historia y Museos</h3>
+            <p class="highlight__text">Valencia tiene una rica historia reflejada en lugares como la Lonja de la Seda y
+              museos como el IVAM.
+              Estos espacios culturales muestran el arte y patrimonio de la región, desde el gótico hasta el arte
+              contemporáneo.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+
+
+
+  <include src="./views/footer.html"></include>
+
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>

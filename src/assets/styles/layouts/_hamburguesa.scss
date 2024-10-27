@@ -1,0 +1,49 @@
+// Menú de Hamburguesa
+
+.header__hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    &-line {
+        width: 30px;
+        height: 3px;
+        background-color: $primary-color;
+        margin: 3px 0;
+    }
+
+}
+
+
+// Estilos responsive
+@media (max-width: $mqMinTablet) {
+    .header__hamburguesa {
+        display: flex;
+    }
+
+    .header__navbar {
+        position: relative;
+    }
+
+    .header__navigation {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $text-color-dark-background;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition: all 0.3s;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+}

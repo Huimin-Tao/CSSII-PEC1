@@ -1,0 +1,12 @@
+// Footer
+
+.footer{
+    background-color: $primary-color;
+    color: $text-color-dark-background;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+}

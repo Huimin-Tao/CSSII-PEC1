@@ -1,12 +1,24 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+// Función personalizada para ajustar la opacidad de un color
+@function adjust-opacity($color, $opacity) {
+    @return color.change($color, $alpha: $opacity);
+}
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// Variables de colores y fuentes
+$font-family-noto-serif: "Noto Serif", serif;
+$font-family-roboto: "Roboto", sans-serif;
 
-$mqMinWidth: 420px;
+$primary-color: #313866;
+$secondary-color: #BF0CF0;
+$contrast-color-light: #F3CCF3;
+$text-color-dark-background: #FFFFFF;
+$text-color-grey: #9e9dab;
+// Ajustar la opacidad de fondo usando la función
+$bg-color: adjust-opacity($text-color-dark-background, 0.9);
+
+
+// Variables de media queries
+$mqMinMobile: 768px;
+$mqMinTablet: 992px;
+$mqMinDesktop: 1200px;
